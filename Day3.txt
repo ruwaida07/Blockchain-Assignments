@@ -1,0 +1,22 @@
+pragma solidity >=0.4.17 <0.7.0;
+
+contract LandRecord{
+    string public Owner;
+    string public Location;
+    string public Area;
+    uint public Value;
+    
+    function LandRecord(string newOwner, string newLocation, string newArea, uint newValue) public{
+        Owner = newOwner;
+        Location = newLocation;
+        Area = newArea;
+        Value = newValue;
+    }
+    function setDetails(string newOwner,uint newValue)public{
+        Owner= newOwner;
+        Value = newValue;
+    }
+    function getDetails()public view returns(string, string, string, uint){
+        return(Owner, Location, Area, Value);
+    }
+    }
